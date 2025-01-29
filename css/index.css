@@ -10,20 +10,19 @@
     overflow-x: hidden;
     background-color: var(--primary-color-background);
     font-family: "Karla", serif;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 16px;
     color: var(--primary-color-text);
-    width: 900px;
-    max-width: 900px;
+    width: 100vw;
 }
 .section {
     background-color: #fff;
     width: 900px;
     margin: 0 auto;
     border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 h1 {
     font-size: 25px;
@@ -45,10 +44,15 @@ label {
     display: block;
 }
 input {
-    width: 99%;
+    width: 100%;
     border: solid 1px;
     border-radius: 5px;
-    margin-top: 1%;
+    margin-top: 10px;
+}
+input:focus,
+textarea:focus {
+    border: none;
+    outline: solid 1px var(--primary-color-green);
 }
 .asterisk {
     color: var(--primary-color-green);
@@ -59,12 +63,14 @@ input {
 }
 .first_name, .last_name, .email {
     height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .general_Enquiry-wrap, .support_request-wrap {
     border: solid 1px var(--primary-color-text);
     flex: 1;
     border-radius: 5px;
-    margin-top: 1%;
+    margin-top: 10px;
     height: 40px;
     align-items: center;
     display: flex;
@@ -80,8 +86,17 @@ input[type="radio"]:checked {
 .general_Enquiry, .support_request {
     width: 10%;
 }
+.general_Enquiry:focus, .support_request:focus {
+    outline: none;
+}
 .message {
     height: 80px;
+    width: 100%;
+    border: solid 1px var(--primary-color-text);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .checkboxItem {
     display: flex;
@@ -103,6 +118,8 @@ input[type="radio"]:checked {
     border: 1px solid var(--primary-color-green);
     border-radius: 2px;
     cursor: pointer;
+    margin-right: 20px;
+    margin-top: 0px;
 }
 
 .checkbox:checked {
@@ -126,7 +143,7 @@ input[type="radio"]:checked {
     color: #fff;
     width: 100%;
     text-align: center;
-    padding: 2.5%;
+    height: 40px;
     border: none;
     border-radius: 8px;
     letter-spacing: 1px;

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link rel="shortcut icon" href="assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/reset.css">
@@ -14,40 +15,36 @@
   
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> -->
 </head>
 <body class="body">
   <section class="section">
     <div class="section__inner">
       <h1>Contact Us</h1>
       <div class="flex section__inner--space">
-        <div class="first_name-wrap">
+        <div class="first_name-wrap sp_section__inner--space">
           <label>First Name<span class="asterisk">*</span></label>
           <input type="text" name="first_name" autocomplete="given-name" id="first_name" class="first_name">
         </div>
-        <div class="last_name-wrap">
+        <div class="last_name-wrap sp_section__inner--space">
           <label>Last Name<span class="asterisk">*</span></label>
           <input type="text" name="last_name" autocomplete="family-name" id="last_name" class="last_name">
         </div>
-        </div>
+      </div>
       <label class="section__inner--space">Email Address<span class="asterisk">*</span></label>
       <input type="text" name="email" autocomplete="email" id="email" class="email">
 
       <label class="section__inner--space">Query Type<span class="asterisk">*</span></label>
       <div class="flex">
-        <div class="general_Enquiry-wrap"><input type="radio" name="general_Enquiry" id="general_Enquiry" class="general_Enquiry">General Enquiry</div>
-        <div class="support_request-wrap"><input type="radio" name="support_request" id="support_request" class="support_request">Support Request</div>
+        <div class="general_Enquiry-wrap"><input type="radio" name="query-type" id="general_Enquiry" class="general_Enquiry">General Enquiry</div>
+        <div class="support_request-wrap"><input type="radio" name="query-type" id="support_request" class="support_request">Support Request</div>
       </div>
 
       <label class="section__inner--space">Message<span class="asterisk">*</span></label>
-      <input type="text" name="message" autocomplete="off" id="message" class="message">
+      <textarea  type="text" name="message" autocomplete="off" id="message" class="message"></textarea> 
 
       <!-- <label class="section__inner--largespace"><input type="radio" name="" value="">I consent to being contacted by the team</label> -->
       <label class="checkboxItem section__inner--largespace">
-        <input type="checkbox" name="checkbox" value="I consent to being contacted by the team" class="checkbox" checked />
+        <input type="checkbox" name="checkbox" value="I consent to being contacted by the team" class="checkbox">
         I consent to being contacted by the team<span class="asterisk">*</span>
       </label>
 

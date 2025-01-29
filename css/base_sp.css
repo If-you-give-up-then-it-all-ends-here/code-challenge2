@@ -5,7 +5,33 @@
         display: block;
     }
     .section {
-        background-color: #ff0000;
+        width: 90%;
     }
+    h1 {
+        margin-bottom: 40px;
+    }
+    .section__inner--space, .sp_section__inner--space {
+        margin-top: 4%;
+    }
+    input, .general_Enquiry-wrap {
+        margin-top: 2%;
+    }
+    .support_request-wrap {
+        margin-top: 15px;
+    }
+    .section__inner {
+        padding: 5%;
+    }
+}
 
+@media screen and (max-width: 500px) {
+    .body {
+        font-size: 14px;
+    }
+    .general_Enquiry-wrap, .support_request-wrap {
+        font-size: 16px;
+    }
+    .section__inner {
+        padding: 7%;
+    }
 }
