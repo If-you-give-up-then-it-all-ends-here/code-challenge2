@@ -1,0 +1,133 @@
+
+:root {
+    --primary-color-background: hsl(148, 38%, 91%);
+    --primary-color-green: hsl(169, 82%, 27%);
+    --primary-color-text: hsl(187, 24%, 22%);
+}
+
+
+.body {
+    overflow-x: hidden;
+    background-color: var(--primary-color-background);
+    font-family: "Karla", serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: var(--primary-color-text);
+    width: 900px;
+    max-width: 900px;
+}
+.section {
+    background-color: #fff;
+    width: 900px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+h1 {
+    font-size: 25px;
+}
+.section__inner {
+    padding: 4%;
+}
+.section__inner--space {
+    margin-top: 3%;
+}
+.section__inner--largespace {
+    margin-top: 4%;
+}
+.flex {
+    display: flex;
+    gap: 3%;
+}
+label {
+    display: block;
+}
+input {
+    width: 99%;
+    border: solid 1px;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+.asterisk {
+    color: var(--primary-color-green);
+    margin-left: 5px;
+}
+.first_name-wrap, .last_name-wrap {
+    flex: 1;
+}
+.first_name, .last_name, .email {
+    height: 40px;
+}
+.general_Enquiry-wrap, .support_request-wrap {
+    border: solid 1px var(--primary-color-text);
+    flex: 1;
+    border-radius: 5px;
+    margin-top: 1%;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+}
+input[type="radio"]  {
+    margin: 0 10px;
+    height: 18px;
+}
+input[type="radio"]:checked {
+    accent-color: var(--primary-color-green);
+}
+.general_Enquiry, .support_request {
+    width: 10%;
+}
+.message {
+    height: 80px;
+}
+.checkboxItem {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.checkboxItem:not(:last-of-type) {
+    margin-bottom: 16px;
+}
+
+.checkbox {
+    appearance: none;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--primary-color-green);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.checkbox:checked {
+    background-color: var(--primary-color-green);
+}
+
+.checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 8px;
+    height: 2px;
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    transform: rotate(-45deg);
+}
+
+.botton {
+    background-color: var(--primary-color-green);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 2.5%;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}

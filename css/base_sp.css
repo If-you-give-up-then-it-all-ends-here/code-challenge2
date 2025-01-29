@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 900px) {
+    .flex {
+        display: block;
+    }
+    .section {
+        background-color: #ff0000;
+    }
+
+}
