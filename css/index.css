@@ -3,6 +3,7 @@
     --primary-color-background: hsl(148, 38%, 91%);
     --primary-color-green: hsl(169, 82%, 27%);
     --primary-color-text: hsl(187, 24%, 22%);
+    --primary-color-error: hsl(0, 66%, 54%);
 }
 
 
@@ -51,6 +52,7 @@ input {
     margin-top: 10px;
     cursor: pointer;
 }
+
 input:focus,
 textarea:focus {
     border: none;
@@ -67,6 +69,20 @@ textarea:focus {
     height: 40px;
     padding: 10px;
     box-sizing: border-box;
+}
+.error-border {
+    border: solid 1px var(--primary-color-error) !important;
+}
+.error-text {
+    color: var(--primary-color-error);
+    margin-top: 10px;
+    display: none;
+}
+.hidden {
+    display: none;
+}
+.block {
+    display: block;
 }
 .general_Enquiry-wrap, .support_request-wrap {
     border: solid 1px var(--primary-color-text);
@@ -162,4 +178,31 @@ input[type="radio"]:checked {
     border: none;
     border-radius: 8px;
     letter-spacing: 1px;
+}
+
+/* send message */
+.send_message {
+    color: #fff;
+    background-color: var(--primary-color-text);
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 999;
+    display: none;
+}
+.send_message-top {
+    font-weight: 600;
+    letter-spacing: 1px;
+    align-items: center;
+    display: flex;
+}
+.send_message-thank {
+    color: var(--primary-color-background);
+    margin-top: 20px;
+}
+.success-check {
+    margin-right: 8px;
 }
