@@ -89,7 +89,7 @@ const displayError2 = ()=>{
 const displayError3 = ()=>{
     emailInput.classList.add("error-border");
     errorText3.classList.add("block");
-    email.placeholder = "email #example.com";
+    email.placeholder = "email@example.com";
 };
 const displayError4 = ()=>{
     errorText4.classList.add("block");

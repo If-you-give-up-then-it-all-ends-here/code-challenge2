@@ -14,16 +14,17 @@
     font-size: 16px;
     color: var(--primary-color-text);
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;/*最低限の高さを確保しつつ、内容が増えたら広がる*/
 }
 .section {
     background-color: #fff;
-    width: 900px;
+    width: 850px;
     margin: 0 auto;
     border-radius: 15px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative; /* .bodyの影響を受ける */
 }
 h1 {
     font-size: 25px;
@@ -51,6 +52,10 @@ input {
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
+    font-size: 16px;
+}
+textarea {
+    font-size: 16px;
 }
 
 input:focus,
@@ -84,7 +89,7 @@ textarea:focus {
 .block {
     display: block;
 }
-.general_Enquiry-wrap, .support_request-wrap {
+.general_enquiry-wrap, .support_request-wrap {
     border: solid 1px var(--primary-color-text);
     flex: 1;
     border-radius: 5px;
@@ -95,13 +100,15 @@ textarea:focus {
     font-size: 18px;
     cursor: pointer;
 }
-.general_Enquiry-wrap label, .support_request-wrap label {
+.general_enquiry-wrap label, .support_request-wrap label {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
 }
-.general_Enquiry-wrap:has(input[type="radio"]:checked),
+/*:has() 擬似クラスはラジオボタンがチェックされたときに、その親の div の背景色を変更する*/
+/*input[type="radio"]:checked 選択されているラジオボタンだけにスタイルを適用する選択されているラジオボタンだけにスタイルを適用*/
+.general_enquiry-wrap:has(input[type="radio"]:checked),
 .support_request-wrap:has(input[type="radio"]:checked) {
     background-color: var(--primary-color-background);
     transition: background-color 0.2s ease-in-out;
@@ -113,10 +120,10 @@ input[type="radio"]  {
 input[type="radio"]:checked {
     accent-color: var(--primary-color-green);
 }
-.general_Enquiry, .support_request {
+.general_enquiry, .support_request {
     width: 10%;
 }
-.general_Enquiry:focus, .support_request:focus {
+.general_enquiry:focus, .support_request:focus {
     outline: none;
 }
 .message {
@@ -137,6 +144,7 @@ input[type="radio"]:checked {
     cursor: pointer;
 }
 
+/*:not() → 指定した条件を「除外」する➡.checkboxItem のうち、最後の .checkboxItem 以外にスタイルを適用する*/
 .checkboxItem:not(:last-of-type) {
     margin-bottom: 16px;
 }
@@ -169,7 +177,7 @@ input[type="radio"]:checked {
     transform: rotate(-45deg);
 }
 
-.botton {
+.button {
     background-color: var(--primary-color-green);
     color: #fff;
     width: 100%;
@@ -178,6 +186,11 @@ input[type="radio"]:checked {
     border: none;
     border-radius: 8px;
     letter-spacing: 1px;
+}
+.button:hover {
+    background-color: var(--primary-color-text);
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 /* send message */

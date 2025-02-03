@@ -13,7 +13,7 @@
     .section__inner--space, .sp_section__inner--space {
         margin-top: 4%;
     }
-    input, .general_Enquiry-wrap {
+    input, .general_enquiry-wrap {
         margin-top: 2%;
     }
     .support_request-wrap {
@@ -30,14 +30,13 @@
     .message {
         height: 150px;
     }
-
 }
 
 @media screen and (max-width: 500px) {
     .body {
         font-size: 14px;
     }
-    .general_Enquiry-wrap, .support_request-wrap {
+    .general_enquiry-wrap, .support_request-wrap {
         font-size: 16px;
     }
     .section__inner {
