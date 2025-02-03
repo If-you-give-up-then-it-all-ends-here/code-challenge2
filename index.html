@@ -23,38 +23,40 @@
       <div class="flex section__inner--space">
         <div class="first_name-wrap sp_section__inner--space">
           <label>First Name<span class="asterisk">*</span></label>
+
+          <!-- idとクラスで二つ同じ名前つける必要ない -->
           <input type="text" name="first_name" autocomplete="given-name" id="first_name" class="first_name">
-          <p class="error-text js_error-text1">This field is required</p>
+          <p class="error-text js_error-text">This field is required</p>
         </div>
         <div class="last_name-wrap sp_section__inner--space">
           <label>Last Name<span class="asterisk">*</span></label>
           <input type="text" name="last_name" autocomplete="family-name" id="last_name" class="last_name">
-          <p class="error-text js_error-text2">This field is required</p>
+          <p class="error-text js_error-text">This field is required</p>
         </div>
       </div>
       <label class="section__inner--space">Email Address<span class="asterisk">*</span></label>
       <input type="text" name="email" autocomplete="email" id="email" class="email">
-      <p class="error-text js_error-text3">Please enter a valid email address</p>
+      <p class="error-text js_error-text">Please enter a valid email address</p>
 
       <label class="section__inner--space">Query Type<span class="asterisk">*</span></label>
       <div class="flex">
-        <div class="general_Enquiry-wrap"><input type="radio" name="query-type" id="general_Enquiry" class="general_Enquiry">
+        <div class="general_Enquiry-wrap"><input type="radio" name="query-type" id="general_Enquiry" class="general_Enquiry" data-input-type="check">
           <label for="general_Enquiry">General Enquiry</label></div>
         <div class="support_request-wrap"><input type="radio" name="query-type" id="support_request" class="support_request">
           <label for="support_request">Support Request</label></div>
       </div>
-      <p class="error-text js_error-text4">Please select a query type</p>
+      <p class="error-text js_error-text">Please select a query type</p>
 
       <label class="section__inner--space">Message<span class="asterisk">*</span></label>
       <textarea  type="text" name="message" autocomplete="off" id="message" class="message"></textarea> 
-      <p class="error-text js_error-text5">This field is required</p>
+      <p class="error-text js_error-text">This field is required</p>
 
       <!-- <label class="section__inner--largespace"><input type="radio" name="" value="">I consent to being contacted by the team</label> -->
       <label class="checkboxItem section__inner--largespace">
-        <input type="checkbox" class="checkbox" id="js_checkbox">
+        <input type="checkbox" class="checkbox" id="js_checkbox" data-input-type="check">
         <p>I consent to being contacted by the team<span class="asterisk">*</span></p>
       </label>
-      <p class="error-text js_error-text6">To submit this form, please consent to being contacted</p>
+      <p class="error-text js_error-text">To submit this form, please consent to being contacted</p>
 
       <button class="botton section__inner--largespace" id="js_button">Submit</button>
 
