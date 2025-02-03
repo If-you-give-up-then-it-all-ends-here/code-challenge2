@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 900px) {
+    .flex {
+        display: block;
+    }
+    .section {
+        width: 90%;
+    }
+    h1 {
+        margin-bottom: 40px;
+    }
+    .section__inner--space, .sp_section__inner--space {
+        margin-top: 4%;
+    }
+    input, .general_enquiry-wrap {
+        margin-top: 2%;
+    }
+    .support_request-wrap {
+        margin-top: 15px;
+    }
+    .section__inner {
+        padding: 5%;
+    }
+    .message {
+        height: 100px;
+    }
+}
+@media screen and (max-width: 700px)  {
+    .message {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .body {
+        font-size: 14px;
+    }
+    .general_enquiry-wrap, .support_request-wrap {
+        font-size: 16px;
+    }
+    .section__inner {
+        padding: 7%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .message {
+        height: 200px;
+    }
+}

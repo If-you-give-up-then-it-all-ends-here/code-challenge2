@@ -2,51 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="./css/base_sp.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital@0;1&family=Noto+Sans+JP:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New:wght@400;500&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="body">
+  <section class="section">
+    <div class="section__inner">
+      <h1>Contact Us</h1>
+      <div class="flex section__inner--space"><!--fastnameとlastnameのdiv-->
+        <div class="first_name-wrap sp_section__inner--space"><!--First Name-->
+          <label>First Name<span class="asterisk">*</span></label>
+          <input type="text" name="first_name" autocomplete="given-name" id="first_name" class="first_name">
+          <p class="error-text js_error-text1">This field is required</p>
+        </div>
+        <div class="last_name-wrap sp_section__inner--space"><!--Last Name-->
+          <label>Last Name<span class="asterisk">*</span></label>
+          <input type="text" name="last_name" autocomplete="family-name" id="last_name" class="last_name">
+          <p class="error-text js_error-text2">This field is required</p>
+        </div>
+      </div>
+      <label class="section__inner--space">Email Address<span class="asterisk">*</span></label><!--Email-->
+      <input type="text" name="email" autocomplete="email" id="email" class="email">
+      <p class="error-text js_error-text3">Please enter a valid email address</p>
 
-  Contact Us
+      <label class="section__inner--space">Query Type<span class="asterisk">*</span></label><!--Query Type-->
+      <div class="flex">
+        <div class="general_enquiry-wrap"><input type="radio" name="query-type" id="general_enquiry" class="general_enquiry">
+          <label for="general_enquiry">General Enquiry</label></div>
+        <div class="support_request-wrap"><input type="radio" name="query-type" id="support_request" class="support_request">
+          <label for="support_request">Support Request</label></div>
+      </div>
+      <p class="error-text js_error-text4">Please select a query type</p>
 
-  First Name
-  This field is required
+      <label class="section__inner--space">Message<span class="asterisk">*</span></label><!--Message-->
+      <textarea  name="message" autocomplete="off" id="message" class="message"></textarea>  <!-- autocomplete="off"は自動補完 OFF -->
+      <p class="error-text js_error-text5">This field is required</p>
 
-  Last Name
-  This field is required
+      <label class="checkboxItem section__inner--largespace"><!--checkbox-->
+        <input type="checkbox" class="checkbox" id="js_checkbox">
+        <p>I consent to being contacted by the team<span class="asterisk">*</span></p>
+      </label>
+      <p class="error-text js_error-text6">To submit this form, please consent to being contacted</p>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+      <button class="button section__inner--largespace" id="js_button">Submit</button>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+    </div>
+  </section>
 
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  <section class="send_message">
+    <p class="send_message-top"><img src="assets/images/icon-success-check.svg" class="success-check">Message Sent!</p>
+    <p class="send_message-thank">Thanks for completing the form. We'll be in touch soon!</p>
+  </section>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="js/error.js"></script>
 </body>
 </html>
