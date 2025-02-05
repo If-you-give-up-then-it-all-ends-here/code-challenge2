@@ -22,25 +22,25 @@ submit.addEventListener("click",()=>{
 });
 
 // 関数
-const isEmail = (input) =>{
+const isEmailField = (input) =>{
     return input !== null && input.id === "email" ? true : false
 }
-const ischeck= (input) =>{ 
+const ischeckField= (input) =>{ 
     return (input == null || input.getAttribute("data-input-type") == "check")  ? true: false
 }
 
 const displayError = (errorTxt, input)=>{
     errorTxt.classList.add("block");
 
-    if(!ischeck(input)) {
+    if(!ischeckField(input)) {
         input.classList.add("error-border");
     }
-    if(isEmail(input)) input.placeholder = "email #example.com"
+    if(isEmailField(input)) input.placeholder = "email #example.com"
 }
 
 const hideError = (errorTxt, input) =>{
     errorTxt.classList.remove("block");
 
-    if(!ischeck(input)) input.classList.remove("error-border");
-    if(isEmail(input)) input.placeholder = ""
+    if(!ischeckField(input)) input.classList.remove("error-border");
+    if(isEmailField(input)) input.placeholder = ""
 }
