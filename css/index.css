@@ -14,15 +14,15 @@
     font-size: 16px;
     color: var(--primary-color-text);
     width: 100vw;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     min-height: 100vh;/*最低限の高さを確保しつつ、内容が増えたら広がる*/
 }
 .section {
     background-color: #fff;
     width: 850px;
-    margin: 0 auto;
+    margin: 10% auto;
     border-radius: 15px;
     position: relative; /* .bodyの影響を受ける */
 }
@@ -87,7 +87,7 @@ textarea:focus {
     display: none;
 }
 .block {
-    display: block;
+    display: block !important;
 }
 .general_enquiry-wrap, .support_request-wrap {
     border: solid 1px var(--primary-color-text);
@@ -202,8 +202,11 @@ input[type="radio"]:checked {
     margin-top: 30px;
     padding: 30px;
     border-radius: 10px;
-    position: relative;
     z-index: 999;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
     display: none;
 }
 .send_message-top {
