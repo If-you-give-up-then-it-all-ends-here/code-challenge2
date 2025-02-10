@@ -21,36 +21,44 @@
     <div class="section__inner">
       <h1>Contact Us</h1>
       <div class="flex section__inner--space"><!--fastnameとlastnameのdiv-->
-        <div class="first_name-wrap sp_section__inner--space"><!--First Name-->
+        <!--First Name-->
+        <div class="first_name-wrap sp_section__inner--space">
           <label>First Name<span class="asterisk">*</span></label>
           <input type="text" name="first_name" autocomplete="given-name" id="first_name" class="first_name">
           <p class="error-text js_error-text1">This field is required</p>
         </div>
-        <div class="last_name-wrap sp_section__inner--space"><!--Last Name-->
+
+        <!--Last Name-->
+        <div class="last_name-wrap sp_section__inner--space">
           <label>Last Name<span class="asterisk">*</span></label>
           <input type="text" name="last_name" autocomplete="family-name" id="last_name" class="last_name">
           <p class="error-text js_error-text2">This field is required</p>
         </div>
       </div>
-      <label class="section__inner--space">Email Address<span class="asterisk">*</span></label><!--Email-->
+
+      <!--Email-->
+      <label class="section__inner--space">Email Address<span class="asterisk">*</span></label>
       <input type="text" name="email" autocomplete="email" id="email" class="email">
       <p class="error-text js_error-text3">Please enter a valid email address</p>
 
-      <label class="section__inner--space">Query Type<span class="asterisk">*</span></label><!--Query Type-->
+      <!--Query Type-->
+      <label class="section__inner--space">Query Type<span class="asterisk">*</span></label>
       <div class="flex">
-        <div class="general_enquiry-wrap"><input type="radio" name="query-type" id="general_enquiry" class="general_enquiry">
+        <div class="general_enquiry-wrap"><input type="radio" name="query-type" id="general_enquiry" class="general_enquiry js_radio" value="radio">
           <label for="general_enquiry">General Enquiry</label></div>
-        <div class="support_request-wrap"><input type="radio" name="query-type" id="support_request" class="support_request">
+        <div class="support_request-wrap"><input type="radio" name="query-type" id="support_request" class="support_request js_radio" value="radio2">
           <label for="support_request">Support Request</label></div>
       </div>
       <p class="error-text js_error-text4">Please select a query type</p>
 
-      <label class="section__inner--space">Message<span class="asterisk">*</span></label><!--Message-->
+      <!--Message-->
+      <label class="section__inner--space">Message<span class="asterisk">*</span></label>
       <textarea  name="message" autocomplete="off" id="message" class="message"></textarea>  <!-- autocomplete="off"は自動補完 OFF -->
       <p class="error-text js_error-text5">This field is required</p>
 
-      <label class="checkboxItem section__inner--largespace"><!--checkbox-->
-        <input type="checkbox" class="checkbox" id="js_checkbox">
+      <!--checkbox-->
+      <label class="checkboxItem section__inner--largespace">
+        <input type="checkbox" class="checkbox js_checkbox" id="js_checkbox" name="checkbox">
         <p>I consent to being contacted by the team<span class="asterisk">*</span></p>
       </label>
       <p class="error-text js_error-text6">To submit this form, please consent to being contacted</p>
